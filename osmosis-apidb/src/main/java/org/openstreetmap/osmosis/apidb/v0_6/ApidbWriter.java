@@ -294,6 +294,8 @@ public class ApidbWriter implements Sink, EntityProcessor {
             buffer.append(")");
         }
 
+        buffer.append(" ON CONFLICT DO NOTHING");
+
         return buffer.toString();
     }
     
